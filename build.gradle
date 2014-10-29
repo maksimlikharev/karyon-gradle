@@ -33,6 +33,7 @@ dependencies {
 
 distributions {
     main{
-        baseName = 'karyon-gradle'
+     baseName = 'karyon-gradle'
     }
 }
+
