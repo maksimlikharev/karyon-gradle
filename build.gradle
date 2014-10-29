@@ -16,14 +16,23 @@ if (!hasProperty('mainClass')) {
     ext.mainClass = ''
 }
 
+buildscript {
+	repositories {
+		jcenter()
+	}
+
+	dependencies {
+		classpath 'com.netflix.nebula:gradle-ospackage-plugin:1.12.2'
+	}
+}
+
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.10'
-	
-	classpath 'com.netflix.nebula:gradle-ospackage-plugin:1.12.+'
 	
 	compile 'com.netflix.karyon:karyon-servo:2.1.00-RC6'
 	compile 'com.netflix.karyon:karyon-core:2.1.00-RC6'
