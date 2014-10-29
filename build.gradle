@@ -41,3 +41,11 @@ distributions {
     }
 }
 
+import org.apache.tools.ant.filters.*
+ospackage {
+    def dist = new File(buildRepo.moduleDir, 'build/distributions/karyon-gradle.zip')
+    from( zipTree(dist) ) {
+        into('/opt')
+    }
+}
+buildDeb.dependsOn(buildRepo)
