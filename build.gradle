@@ -1,4 +1,6 @@
 apply plugin: 'java'
+apply plugin: 'distribution'
+apply plugin: 'java-library-distribution'
 
 sourceCompatibility = '1.7'
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
@@ -27,4 +29,10 @@ dependencies {
 	compile 'com.netflix.karyon:karyon-governator:2.1.00-RC6'
 	compile 'com.netflix.karyon:karyon-archaius:2.1.00-RC6'
 	compile 'org.codehaus.jettison:jettison:1.2'
+}
+
+distributions {
+    main{
+        baseName = 'karyon-gradle'
+    }
 }
