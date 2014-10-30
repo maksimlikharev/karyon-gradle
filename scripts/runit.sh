@@ -4,6 +4,11 @@ VERSION=1.0
 
 export CLASSPATH=$CLASSPATH:karyon-gradle.jar:./lib/*
 
+# set the enviroment
+if [ -r "./setenv.sh" ]; then
+  . "./setenv.sh"
+fi
+
 # Determine the Java command to use to start the JVM.
 if [ -n "$JAVA_HOME" ] ; then
     if [ -x "$JAVA_HOME/jre/sh/java" ] ; then
