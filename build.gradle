@@ -54,7 +54,12 @@ distributions {
 }
 
 ospackage {
+	version = '0.0.1'
+    release = 1
+
     from( zipTree('build/distributions/karyon-gradle.zip') ) {
         into('/opt')
     }
 }
+
+buildDeb.dependsOn(distZip)
