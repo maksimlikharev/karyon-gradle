@@ -54,8 +54,7 @@ distributions {
 }
 
 ospackage {
-    def dist = new File(buildRepo.moduleDir, 'build/distributions/karyon-gradle.zip')
-    from( zipTree(dist) ) {
+    from( zipTree('build/distributions/karyon-gradle.zip') ) {
         into('/opt')
     }
 }
