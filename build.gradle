@@ -56,7 +56,7 @@ distributions {
 ospackage {
     version = '0.0.1'
 
-	postInstall('echo manual > /etc/init/tomcat7.override')
+	postInstall('echo manual > /etc/init.d/tomcat7.override')
 	
     def karyon = System.getenv("KARYON_OPTS")
     if ( karyon ) {
