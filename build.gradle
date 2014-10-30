@@ -47,14 +47,14 @@ distributions {
     main{
 		baseName = 'karyon-gradle'
 		
-		contents {
+    contents {
             from { 'scripts' }
         }
     }
 }
 
 ospackage {
-	version = '0.0.1'
+    version = '0.0.1'
 
     from( zipTree('build/distributions/karyon-gradle.zip') ) {
         into('/opt')
