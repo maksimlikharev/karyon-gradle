@@ -58,7 +58,7 @@ ospackage {
 
     def karyon = System.getenv("KARYON_OPTS")
     if ( karyon ) {
-        println "Setting up Karyon options"
+        println "Setting up Karyon options: \"${karyon}\""
 		postInstall("echo 'export JAVA_OPTS=\"${karyon}\"' >> /opt/karyon-gradle/setenv.sh")
     }
 	
