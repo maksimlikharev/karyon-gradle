@@ -67,6 +67,9 @@ ospackage {
     from( zipTree('build/distributions/karyon-gradle.zip') ) {
         into('/opt')
     }
+	
+	link('/etc/init/karyon-gradle.conf', '/opt/karyon-gradle/daemon.sh')
+
 }
 
 buildDeb.dependsOn(distZip)
