@@ -1,6 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'distribution'
 apply plugin: 'java-library-distribution'
+apply plugin: 'os-package'
 
 sourceCompatibility = '1.7'
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
@@ -52,11 +53,9 @@ distributions {
     }
 }
 
-import org.apache.tools.ant.filters.*
 ospackage {
     def dist = new File(buildRepo.moduleDir, 'build/distributions/karyon-gradle.zip')
     from( zipTree(dist) ) {
         into('/opt')
     }
 }
-buildDeb.dependsOn(buildRepo)
