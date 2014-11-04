@@ -17,6 +17,19 @@ if (!hasProperty('mainClass')) {
     ext.mainClass = ''
 }
 
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main/java'
+        }
+        resources {
+            srcDir 'src/main/resources'
+            include '*.properties'
+        }
+        
+    }
+}
+
 buildscript {
 	repositories {
 		jcenter()
@@ -68,7 +81,7 @@ ospackage {
         into('/opt')
     }
 	
-	link('/etc/init/karyon-gradle.conf', '/opt/karyon-gradle/daemon.sh')
+    link('/etc/init/karyon-gradle.conf', '/opt/karyon-gradle/daemon.sh')
 
 }
 
