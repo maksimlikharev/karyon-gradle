@@ -1,3 +1,9 @@
 /.nb-gradle/private/
 /build/
 /.gradle/2.1/taskArtifacts
+/*.classpath
+/.gradle/1.12/taskArtifacts
+/*.nb-gradle-properties
+/.nb-gradle/profiles
+/*.project
+/.settings/gradle
