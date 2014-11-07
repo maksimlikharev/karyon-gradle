@@ -17,6 +17,19 @@ if (!hasProperty('mainClass')) {
     ext.mainClass = ''
 }
 
+def definedMainClass = project.hasProperty('mainClass') ? project.mainClass : ''
+if (definedMainClass == null) definedMainClass = ''
+definedMainClass = definedMainClass.toString()
+
+//task debug(type: JavaExec) {
+//    dependsOn project.classes
+//    main = definedMainClass
+//    classpath = project.sourceSets.main.runtimeClasspath
+//    standardInput = System.in
+//    
+//    jvmArgs = ['-Xms128m', '-Xmx512m']
+// } 
+
 sourceSets {
     main {
         java {
@@ -74,7 +87,7 @@ ospackage {
     def karyon = System.getenv("KARYON_OPTS")
     if ( karyon ) {
         println "Setting up Karyon options: \"${karyon}\""
-		postInstall("echo 'export JAVA_OPTS=\"${karyon}\"' >> /opt/karyon-gradle/setenv.sh")
+	postInstall("echo 'export JAVA_OPTS=\"${karyon}\"' >> /opt/karyon-gradle/setenv.sh")
     }
 	
     from( zipTree('build/distributions/karyon-gradle.zip') ) {

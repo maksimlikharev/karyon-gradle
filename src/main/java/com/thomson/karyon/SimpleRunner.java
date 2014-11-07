@@ -13,8 +13,8 @@ public class SimpleRunner {
     public static void main(String[] args) {
 
         Karyon.forRequestHandler(7001,
-                                 new SimpleRouter(), /* Use this instead of RouterWithInterceptors below if interceptors are not required */
-                                 //new RouterWithInterceptors(),
+                                 //new SimpleRouter(), /* Use this instead of RouterWithInterceptors below if interceptors are not required */
+                                 new RouterWithInterceptors(),
                                  new ArchaiusSuite("eureka-client"),
                                  SampleModule.asSuite(),
                                  KaryonEurekaModule.asSuite(), /* Uncomment if you need eureka */

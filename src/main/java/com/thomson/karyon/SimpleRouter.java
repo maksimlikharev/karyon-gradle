@@ -21,7 +21,7 @@ public class SimpleRouter implements RequestHandler<ByteBuf, ByteBuf> {
         final HelloWorldEndpoint endpoint = new HelloWorldEndpoint();
         delegate = new SimpleUriRouter<>();
 
-        delegate.addUri("/healthcheck",
+        delegate.addUri("/healthcheck1",
                         new HealthCheckEndpoint(new HealthCheck()))
                 .addUri("/hello",
                         new RequestHandler<ByteBuf, ByteBuf>() {
