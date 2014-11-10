@@ -1,6 +1,3 @@
-karyon-gradle
-=============
-
 ## Command Line Build
 
 ```bash
@@ -25,6 +22,7 @@ karyon-gradle
 * "http://eureka-lb-XXXXXX" -- your eureka instance url
 * port needs to be your app listening port, this case 7001
 
+* arguments to set in IDE Debug task
 ```
 -Deureka.validateInstanceId=false -Deureka.serviceUrl.default=http://eureka-lb-XXXXXX -Deureka.port=7001
 ```
