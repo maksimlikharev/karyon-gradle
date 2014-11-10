@@ -10,15 +10,16 @@ karyon-gradle
 .../karyon-gradle$ KARYON_OPTS="-Xmx2560m -Djava.awt.headless=true -Deureka.name=karyon -Deureka.region=us-west-2 -Deureka.port=80 -Deureka.us-west-2.availabilityZones=default -Dkaryon.serviceUrl.default=http://$EUREKA_ELB/v2/" ./gradlew clean buildDeb
 ```
 
-bake
+## Bake
 
+```bash
 .../karyon-gradle$ sudo aminate -e ec2_aptitude_linux -b ubuntu-base-ami-ebs build/distributions/karyon-gradle_0.0.1_all.deb
+```
 
+## Launch Instance
+* port 7001
 
-launch instance, port 7001
-
-
-IDE mode
+## IDE Mode
 ===========================
 
 "http://eureka-lb-XXXXXX" -- your eureka instance url
