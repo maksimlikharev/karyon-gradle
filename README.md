@@ -23,7 +23,7 @@ karyon-gradle
 ===========================
 
 * "http://eureka-lb-XXXXXX" -- your eureka instance url
-* port needs to be your app listening port
+* port needs to be your app listening port, this case 7001
 
 ```
 -Deureka.validateInstanceId=false -Deureka.serviceUrl.default=http://eureka-lb-XXXXXX -Deureka.port=7001
