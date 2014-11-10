@@ -67,6 +67,9 @@ dependencies {
 	compile 'com.netflix.karyon:karyon-governator:2.1.00-RC6'
 	compile 'com.netflix.karyon:karyon-archaius:2.1.00-RC6'
 	compile 'org.codehaus.jettison:jettison:1.2'
+    compile 'org.slf4j:slf4j-api:1.7.0'
+    compile 'org.slf4j:slf4j-simple:1.7.0'
+	
 }
 
 distributions {
