@@ -17,5 +17,13 @@ bake
 launch instance, port 7001
 
 
+IDE mode
+===========================
+
+"http://eureka-lb-XXXXXX" -- your eureka instance url
+
+port needs to be your app listening port
+
+-Deureka.validateInstanceId=false -Deureka.serviceUrl.default=http://eureka-lb-XXXXXX -Deureka.port=7001
 
 
